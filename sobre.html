@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/sobre.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Sobre</title>
+</head>
+
+<body id="corpo">
+    <header>
+        <nav>
+            <ul>
+                <li><a id="voltarb" href="./index.html">Voltar</a></li>
+                <i class="bi-moon" onclick="toggleIconsIndex()" id="moon-icon" style="cursor: pointer;"></i>
+                <i class="bi-sun" onclick="toggleIconsIndex()" id="sun-icon" style="cursor: pointer;"></i>
+            </ul>
+        </nav>
+        <img src="./img/Honest-dark.png" alt="logoo" id="logodark" onclick="location.href='index.html'">
+        <img src="./img/Honest.png" alt="Logo" id="logo" onclick="location.href='index.html'">
+    </header>
+
+    <main>
+        <div id="sobre">
+            <h1 id="sn">Sobre nós</h1>
+            <div id="content">
+                <p id="text">Somos uma empresa de desenvolvimento web criada por 4 amigos, trazendo inovação e
+                    tecnologia de ponta para nossos clientes.</p>
+                <div id="card">
+                    <img id="myImage" src="./img/pb.png" alt="Imagem">
+                    <p id="seil">Um de nossos sites desenvolvido para nosso cliente</p>
+                    <a id="link-site" href="https://paulocastro24.github.io/PeaceBurguer/" target="_blank">Acesse aqui</a>
+
+                </div>
+            </div>
+        </div>
+        <div id="icons-ide">
+            <div class="item hidden">
+                <img src="./img/ide-icons/html-icon.png" class="icons" alt="aspi">
+                <div class="textos">
+                    <h2>HTML 5</h2>
+                    <p>Linguagem de marcação de hipertexto utilizada para fazer a estrutura base do site</p>
+                </div>
+            </div>
+            <div class="item hidden">
+                <img src="./img/ide-icons/css-icon.png" class="icons" alt="aspi">
+                <div class="textos">
+                    <h2>CSS 3</h2>
+                    <p>Linguagem de estilização para aparência visual do site</p>
+                </div>
+            </div>
+            <div class="item hidden">
+                <img src="./img/ide-icons/js-icon.png" class="icons" alt="aspi">
+                <div class="textos">
+                    <h2>Javascript</h2>
+                    <p>Linguagem de programação para criar interatividade e manipular conteúdos em páginas web.</p>
+                </div>
+            </div>
+            <div class="item hidden">
+                <img src="./img/ide-icons/aspi-icon.png" class="icons" alt="aspi">
+                <div class="textos">
+                    <h2>ASPI.NET core</h2>
+                    <p>Framework de desenvolvimento web da Microsoft, rápido e multiplataforma, para criar aplicações e
+                        APIs.</p>
+                </div>
+            </div>
+            <div class="item hidden">
+                <img src="./img/ide-icons/mysql-icon.png" class="icons" alt="aspi">
+                <div class="textos">
+                    <h2>MySQL Workbench</h2>
+                    <p>Ferramenta gráfica para administrar e gerenciar bancos de dados MySQL.</p>
+                </div>
+            </div>
+            
+   
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p id="copy">Honest Code©</p>
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=61568760537665">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/honestinterprise/">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a
+                href="https://api.whatsapp.com/send?phone=5511971590602&text=Ol%C3%A1%20gostaria%20de%20ver%20o%20card%C3%A1pio?">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+        </div>
+        <a href="#" class="voltaraotopo">&#9650</a>
+    </footer>
+
+    <script src="./js/sobre.js"></script>
+</body>
+
+</html>

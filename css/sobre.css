@@ -1,0 +1,495 @@
+:root {
+    --color-lightblue: #003ea8;
+    --color-darkblue: #050a30;
+    --color-royalblue: #2b2d54;
+    --color-blue: #12229d;
+    --color-navyblue: #1221a0;
+    --color-ligthgreen: #0ad451;
+    --color-green: #12ba15;
+    --color-purple: #d407bc;
+    --color-yellow: #b3b61c;
+    --color-white: #ffffff;
+    --color-gray: #818181;
+    --color-black: #000000;
+}
+
+@keyframes appear{
+    from{
+        opacity: 01;
+        scale: 0.1;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+
+}
+
+@keyframes leftright{
+    0%{
+        transform: translateX(-150%);
+    } 
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--color-lightblue);
+    scroll-behavior: smooth;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    height: 10vh;
+    border-bottom: 1px solid;
+    z-index: 5;
+    opacity: 95%;
+}
+
+header ul {
+    list-style: none;
+    color: var(--color-black);
+    display: inline;
+    margin-left: 60%;
+}   
+
+
+#voltarb{
+   margin-left: 1600px;
+   
+}
+
+header li {
+    margin-inline: 10px;
+    display: inline-block;
+    margin-top: 2%;
+    padding-inline: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+header li:hover {
+    transform: translateY(-3px);
+    transition: 0.5s ease;
+}
+header li a:hover{
+    border: #000000 solid 2px ;
+    border-top: 0;
+    border-left:0;
+    border-right:0;
+}
+
+
+header li a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--color-black);
+}
+
+header img {
+    width: 60px;
+    margin-left: 5%;
+    position: fixed;
+    bottom: 91%;
+    cursor: pointer;
+}
+
+#logodark {
+    display: none;
+}
+
+
+.bi-moon {
+    color: var(--color-black);
+    margin-left: 92%;
+    position: relative;
+    bottom: 3vh; 
+}
+
+.bi-sun {
+    display: none;
+    color: var(--color-yellow);
+    margin-left: 92%;
+    position: relative;
+    bottom: 3vh; 
+}
+
+
+#hamburger-icon {
+    display: none;
+    /* Escondido por padrão */
+    font-size: 30px;
+    color: var(--color-black);
+    /* Cor do ícone do hambúrguer */
+    z-index: 1050;
+    /* Garante que o ícone fique acima de outros elementos */
+    position: absolute;
+    top: 2vh;
+    right: 5%;
+    /* Coloca o ícone à direita */
+}
+
+/* Menu */
+#menu {
+    list-style: none;
+    color: var(--color-black);
+    margin-left: 60%;
+    border-radius: 12%;
+}
+
+/* Estilos para os itens do menu */
+#menu li {
+    background-color: var(--color-black);
+    margin-inline: 10px;
+
+    border-radius: 18%;
+    color: var(--color-white);
+
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#menu li:hover {
+    transform: translateY(-3px) scale(1.05);
+    transition: 0.5s ease;
+}
+
+
+
+.hidden {
+    opacity: 0;
+    transition: .8s all;
+    filter: blur(15px);
+
+}
+.show {
+    opacity: 1;
+    transform: scale(1.02);
+    filter: blur(0px);
+}
+
+
+
+
+
+
+h1 {
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+#content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+#h21 {
+    text-align: center;
+    color: gray;
+    margin: 5% 0 1% 0;
+}
+
+#sobre {
+    margin-top: 7%;
+}
+
+#text {
+    color: var(--color-white);
+    font-size: 20px;
+    text-align: center; 
+    margin: 0 20px 20px 20px; 
+    max-width: 80%;
+}
+
+#link-site {
+    color: var(--color-white);
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+
+
+#card {
+    background-color: var(--color-gray);
+    width: 140.5vh; 
+    height: auto;
+    border: 2px solid;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#icons-ide {
+    padding: 7% 10% 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Espaço entre a imagem e o texto */
+}
+
+.textos {
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    /* Faz o título ficar em cima do parágrafo */
+}
+
+.icons {
+    width: 13%;
+
+}
+
+
+
+
+#seil {
+    color: var(--color-white);
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+footer {
+    width: 100%;
+    height: 10vh;   
+    background-color: var(--color-white);
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: -20px; 
+}
+
+#copy {
+    color: var(--color-black);
+    margin: 0;
+    
+}
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social a {
+    color: var(--color-black);
+    font-size: 22px;
+    transition: 0.5s ease;
+    margin-left: 5%;
+    padding-inline: 15px;
+}
+ 
+.social a:hover {
+    transform: translateY(-2px) scale(1.10);
+}
+
+.bi-facebook :hover {
+    color: var(--color-lightblue);
+}
+
+.bi-instagram:hover {
+    color: var(--color-purple);
+}
+
+.bi-whatsapp:hover {
+    color: var(--color-green);
+}
+
+#link-site{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+    
+}
+
+
+.voltaraotopo {
+    border: 1px white solid;
+    text-decoration: none;
+    color: white;
+    background-color: var(--color-darkblue);
+    padding: 10px;
+    position: fixed;
+    right: 10px;
+    bottom: 7%;
+    font-size: 25px;
+    border-radius: 50%;
+}
+
+@media (max-width: 500px) {
+
+    .bi-moon{
+        top: -4.5vh;
+    }
+    
+    .bi-sun{
+        top: -4.5vh;
+    }
+
+
+    #menu {
+        display: none;
+        width: 40%;
+        text-align: center;
+        background-color: var(--color-blue);
+        position: absolute;
+        top: 10vh;
+        margin-right: 20%;
+        left: 0;
+        padding-top: 10px;
+        z-index: 1000;
+    }
+    
+   #voltarb{
+    margin-left: 300px;
+    
+   }
+        
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+        color: var(--color-white);
+        /* Cor do texto para branco */
+        font-size: 18px;
+    }
+
+    #hamburger-icon {
+        display: block;
+        position: absolute;
+        top: 2vh;
+        right: 5%;
+    }
+
+    .menu-open #menu {
+        display: block;
+    }
+
+    .menu-open #menu li {
+        color: var(--color-white);
+    }
+
+
+    #voltar {
+        margin-left: 65%;
+    }
+
+    .dianoite {
+        margin-left: 82%;
+    }
+
+    header {
+        height: 12vh;
+        padding: 5px;
+        opacity: 100%;
+    }
+
+    header ul {
+        margin-left: 0;
+        display: block;
+        text-align: center;
+    }
+
+    header li {
+        display: inline-block;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    header img {
+        width: 50px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    #sobre{
+        margin-top: 20%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    #card{
+        height: 65%;
+    }
+
+    #h21 {
+        font-size: 16px;
+    }
+
+    footer {
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    #copy {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .social {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .social a {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .voltaraotopo {
+        font-size: 20px;
+        right: 15px;
+        bottom: 10%;
+    }
+    #sn{
+        margin-top: 15vh;
+    }
+
+  
+
+
+

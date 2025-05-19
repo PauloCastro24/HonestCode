@@ -1,0 +1,456 @@
+:root {
+    --color-lightblue: #003ea8;
+    --color-darkblue: #050a30;
+    --color-royalblue: #2b2d54;
+    --color-blue: #12229d;
+    --color-navyblue: #1221a0;
+    --color-ligthgreen: #0ad451;
+    --color-green: #12ba15;
+    --color-purple: #d407bc;
+    --color-yellow: #b3b61c;
+    --color-white: #ffffff;
+    --color-gray: #818181;
+    --color-black: #000000;
+    --color-red:#ff0404;
+}
+
+@keyframes menu{
+    from{
+        margin-left:100%;
+        opacity: 0;
+    }
+    to{
+        margin-left: 60%;
+        opacity: 1;
+
+    }
+}
+
+@keyframes appear{
+    
+    from{
+        opacity: 0;
+        scale: 0.1;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes xappear{
+    from{
+        margin-left:110%;
+    }
+    to{
+        margin-left: 92%;
+    }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--color-lightblue);
+    scroll-behavior: smooth;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    height: 10vh;
+    border-bottom: 1px solid;
+    opacity: 95%;
+    z-index: 1;
+}
+
+
+
+header img {
+    width: 60px;
+    margin-left: 5%;
+    position: fixed;
+    bottom: 91%;
+    cursor: pointer;
+}
+
+#logodark {
+    display: none;
+}
+
+
+.bi-moon {
+    color: var(--color-black);
+    margin-left: 92%;
+    position: relative;
+    bottom: 3.5vh; 
+}
+
+.bi-sun {
+    display: none;
+    color: var(--color-yellow);
+    margin-left: 92%;
+    position: relative;
+    bottom: 3.5vh; 
+}
+
+
+#hamburger-icon {
+    display: none;
+    font-size: 30px;
+    z-index: 1050;
+    position: absolute;
+    top: 2vh;
+    right: 5%;
+}
+
+#xicon{
+    display: none;
+}
+
+
+header li a:hover{
+    border: #000000 solid 2px ;
+    border-top: 0;
+    border-left:0;
+    border-right:0;
+}
+
+
+
+
+
+
+
+/* Menu */
+
+#menu {
+    list-style: none;
+    display: inline;
+    margin-left: 60%;
+}
+
+/* Estilos para os itens do menu */
+#menu li {
+    cursor: pointer;
+    margin-inline: 10px;
+    display: inline-block;
+    margin-top: 2%;
+    padding-inline: 5px;
+    font-size: 18px ;
+    z-index: 1;
+}
+#menu li a{
+    text-decoration: none;
+    list-style: none; 
+    color: var(--color-black);
+}
+
+#menu li:hover {
+    transform: translateY(-3px) scale(1.05);
+    transition: 0.5s ease;
+}
+
+#introdution {
+    width: 100%;
+    height: 80vh;
+}
+
+#btn {
+    opacity: 0%;
+    bottom: 61%;
+}
+
+h1 {
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#h21 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 5% 0 1% 0;
+}
+
+#paulista {
+    text-align: center;
+    color: white;
+    margin: 2% 0 0 0;
+    font-size: 30px;
+}
+
+
+
+
+
+.hidden {
+    opacity: 0;
+    transition: .8s all;
+    filter: blur(15px);
+    scale: .5;
+
+}
+.show {
+    opacity: 1;
+    transform: scale(1.02);
+    filter: blur(0px);
+    scale: 1;
+}
+
+
+
+
+
+
+footer {
+    width: 100%;
+    height: 10vh;   
+    background-color: var(--color-white);
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: -20px; 
+}
+
+#copy {
+    color: var(--color-black);
+    margin: 0;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social a {
+    color: var(--color-black);
+    font-size: 22px;
+    transition: 0.5s ease;
+    margin-left: 5%;
+    padding-inline: 15px;
+}
+
+.social a:hover {
+    transform: translateY(-3px) scale(1.10);
+}
+
+.bi-facebook:hover {
+    color: var(--color-lightblue);
+}
+
+.bi-instagram:hover {
+    color: var(--color-purple);
+}
+
+.bi-whatsapp:hover {
+    color: var(--color-green);
+}
+
+
+
+
+.voltaraotopo {
+    border: 1px white solid;
+    text-decoration: none;
+    color: white;
+    background-color: var(--color-darkblue);
+    padding: 10px;
+    position: fixed;
+    right: 10px;
+    bottom: 7%;
+    font-size: 25px;
+    border-radius: 50%;
+}
+
+@media (max-width: 500px) {
+
+    .bi-moon{
+        top: 2.5vh;
+    }
+    
+    .bi-sun{
+        top: 2.5vh;
+    }
+
+    #xicon{
+        position: relative;
+        display: none;
+        color: var(--color-white); 
+        font-size: 40px;
+        margin-left: 92%;
+        z-index: 1;
+        animation: xappear 0.5s normal;
+    }
+
+    #xicon:hover{
+        color: var(--color-red);
+        border-radius: 50%;
+    }
+
+    #menu {
+        display: none;
+        color: var(--color-black);
+        margin-left: 60%;
+        border-radius:0  0 0  12%;
+        animation: menu 0.5s linear;
+        width: 40%;
+        text-align: center;
+        height: 36vh;
+        background-color: var(--color-black);
+        position: absolute;
+        top: -2.5vh;
+        padding-top: 10px;
+        z-index: 1;
+    }
+
+    #menu li {
+        display: block;
+        margin: 25px -15px;
+        width: 100%;
+        color: var(--color-white);
+        /* Cor do texto para branco */
+        font-size: 18px;
+    }
+
+    #menu li a{
+        color: var(--color-white);
+
+    }
+
+    #hamburger-icon {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 2vh;
+        right: 5%;
+    }
+
+
+
+    #voltar {
+        margin-left: 65%;
+    }
+
+    .dianoite {
+        margin-left: 82%;
+    }
+
+    header {
+        height: 12vh;
+        padding: 5px;
+        opacity: 100%;
+    }
+
+    header ul {
+        margin-left: 0;
+        display: block;
+        text-align: center;
+    }
+
+    header li {
+        display: inline-block;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    header img {
+        width: 50px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    #sobre{
+        margin-top: 20vh;
+    }
+
+    #btn {
+        width: 22%;
+        height: 3vh;
+        margin-left: 17%;
+        font-size: 14px;
+        bottom: 63%;
+        z-index: 999;
+        opacity: 0%;
+    }
+
+    #introdution {
+        width: 100%;
+        margin-top: 12vh;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    #card{
+        height: 65%;
+    }
+
+    #h21 {
+        font-size: 16px;
+    }
+
+    #paulista {
+        font-size: 20px;
+    }
+
+    iframe#maps {
+        width: 70%;
+        height: 300px;
+        margin: 10% 5%;
+    }
+
+    footer {
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 101px;
+    }
+
+
+    #copy {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .social {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .social a {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .voltaraotopo {
+        font-size: 20px;
+        right: 15px;
+        bottom: 10%;
+    }
+
+}
